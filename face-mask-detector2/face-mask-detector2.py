@@ -91,7 +91,7 @@ maskNet = load_model(args["model"])
 # initialize the video stream and allow the camera sensor to warm up
 print("[INFO] starting video stream...")
 vs = VideoStream(src=0).start()
-time.sleep(2.0)
+time.sleep(1.0)
 
 # loop over the frames from the video stream
 while True:
@@ -104,7 +104,7 @@ while True:
 	(locs, prediction) = detect_and_predict_mask(frame, faceNet, maskNet)
 
 	# loop over the detected face locations and their corresponding locations
-	for (box, pred) in zip(loc, prediction):
+	for (box, pred) in zip(locs, prediction):
 		(startX, startY, endX, endY) = box
 		(mask, withoutMask) = pred
 
