@@ -10,3 +10,4 @@
     Make sure the necessary libraries have been installed，for example：pip install tensorflow
 
 ## Result
+![image](https://github.com/xiaosnowqiang/Real-Time-Face-Mask-Detection/blob/master/img/mytest.png)
